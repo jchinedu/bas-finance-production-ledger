@@ -208,6 +208,9 @@ Returns a per-loan, per-invoice breakdown with the exact kobo difference for any
 
 ---
 
+> See [`DESIGN_NOTE.md`](./DESIGN_NOTE.md) for failure modes, webhook handling, ledger drift detection, and 100× scaling architecture.
+> See [`NOTES.md`](./NOTES.md) for assumptions and what was verified by hand.
+
 ### 9. Failure Modes Handled
 
 | Failure | Mitigation |
