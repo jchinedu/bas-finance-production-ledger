@@ -1,0 +1,31 @@
+{
+  "name": "bas-finance-production-ledger",
+  "version": "1.0.0",
+  "description": "BAS Finance – Production Ledger Engine",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/server.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:concurrency": "vitest run --reporter=verbose src/tests/concurrency.test.ts",
+    "migrate": "node --import tsx/esm src/db/migrate.ts",
+    "db:reset": "node --import tsx/esm src/db/reset.ts"
+  },
+  "dependencies": {
+    "fastify": "^4.28.1",
+    "@fastify/formbody": "^7.4.0",
+    "pg": "^8.13.3",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@types/pg": "^8.11.10",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8",
+    "@testcontainers/postgresql": "^10.15.0",
+    "testcontainers": "^10.15.0"
+  }
+}
